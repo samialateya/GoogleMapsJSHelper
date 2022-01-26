@@ -31,8 +31,8 @@ composer install
 6. go to index.html line 12. src="https://maps.googleapis.com/maps/api/js?key=your_api_key"
 
 ## images
-[the map](./images/readme/1.png)
-[current location view](./images/readme/2.png)
+[the map](./images/readme/1.png) |
+[current location view](./images/readme/2.png) |
 [street view](./images/readme/3.png)
 
 ## Contributing
