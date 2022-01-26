@@ -30,10 +30,10 @@ composer install
 5. copy the key to use it to access google maps SDK
 6. go to index.html line 12. src="https://maps.googleapis.com/maps/api/js?key=your_api_key"
 
-## images
-[the map](./images/readme/1.png) |
-[current location view](./images/readme/2.png) |
-[street view](./images/readme/3.png)
+## Images
+[The map](./images/readme/1.png) |
+[Current location view](./images/readme/2.png) |
+[Street view](./images/readme/3.png)
 
 ## Contributing
 
