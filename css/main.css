@@ -1,0 +1,55 @@
+/* remove default margin and reset box sizing for all elements */
+*,
+*::after,
+*::after {
+	margin: 0px;
+	box-sizing: border-box;
+}
+/* ============ utilities classes ============= */
+.d-none {
+	display: none !important;
+}
+
+/* maps container element */
+.maps-container {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: auto;
+}
+/* street view container element */
+.street-view-container {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	inset: 0;
+	z-index: 5;
+}
+
+.maps-btn {
+	width: 2.5rem;
+	height: 2.5rem;
+	background: #fff;
+	color: #666;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 2rem;
+	border-radius: 0.2rem;
+	position: absolute;
+	bottom: 1.5rem;
+	left: var(--left);
+	cursor: pointer;
+	user-select: none;
+}
+
+.maps-btn:hover {
+	color: #333;
+}
+
+.close-btn {
+	z-index: 10;
+	top: 0.6rem;
+	right: 4rem;
+}
