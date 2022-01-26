@@ -19,7 +19,6 @@ clone this repository
 
 ```
 git clone https://github.com/samialateya/GoogleMapsJSHelper.git
-composer install
 ```
 
 ## Google Developer Console Setup
