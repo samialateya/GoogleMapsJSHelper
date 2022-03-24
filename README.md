@@ -12,6 +12,7 @@ User has the following features provided
 - calculate the distance between user's current location and the dropped marker
 - street view 
 
+## Bundled with [Vite](https://vitejs.dev/)
 
 ## Installation
 
@@ -19,6 +20,10 @@ clone this repository
 
 ```
 git clone https://github.com/samialateya/GoogleMapsJSHelper.git
+
+npm install
+
+npm run dev
 ```
 
 ## Google Developer Console Setup

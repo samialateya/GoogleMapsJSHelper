@@ -14,7 +14,7 @@ export class Maps {
 	#currentCoords;
 	//?in the constructor we assign the attributes and insatiate the map
 	constructor(latitude, longitude, mapsDrawingArea) {
-		//*we catch the default coordinates to draw thw map
+		//*we catch the default coordinates to draw the map and set them to the class attributes
 		this.#latitude = parseFloat(latitude) ?? 0;
 		this.#longitude = parseFloat(longitude) ?? 0;
 		//catch maps drawing element
@@ -55,16 +55,16 @@ export class Maps {
 			(position) => {
 				//save current position
 				this.#currentCoords = {
-					latitude: position.coords.latitude,
-					longitude: position.coords.longitude
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
 				};
 				//move map position to view the user current location
-				this.changeMapPosition(this.#currentCoords.latitude, this.#currentCoords.longitude);
+				this.changeMapPosition(this.#currentCoords);
 				//zoom in
 				this.changeMapZoom(16);
 				//*define a marker options to be dropped in users current location
 				const markerOptions = {
-					position: { lat: this.#currentCoords.latitude, lng: this.#currentCoords.longitude },
+					position: this.#currentCoords,
 					map: this.#mapsInstances,
 					icon: "http://maps.google.com/mapfiles/kml/pal3/icon40.png",
 					title: "Lat: " + this.#currentCoords.latitude + ", Lng: " + this.#currentCoords.longitude,
@@ -86,11 +86,8 @@ export class Maps {
 	}
 
 	//*move map position to new coordinates
-	changeMapPosition(latitude, longitude) {
-		this.#mapsInstances.setCenter({
-			lat: latitude,
-			lng: longitude,
-		});
+	changeMapPosition(coords) {
+		this.#mapsInstances.setCenter(coords);
 	}
 
 	//*change maps zoom level
@@ -157,13 +154,13 @@ export class Maps {
 		}
 		//catch first point which is current user location coordinates
 		const firstPoint = {
-			latitude : this.#currentCoords.latitude,
-			longitude : this.#currentCoords.longitude,
+			lat : this.#currentCoords.lat,
+			lng : this.#currentCoords.lng,
 		}
 		//catch first point which is the marker location coordinates
 		const secondPoint = {
-			latitude: this.#markerInstances.position.lat(),
-			longitude: this.#markerInstances.position.lng(),
+			lat: this.#markerInstances.position.lat(),
+			lng: this.#markerInstances.position.lng(),
 		}
 		//*use distance class to calculate distance
 		const distanceHelper = new DistanceHelper(firstPoint, secondPoint);

@@ -14,10 +14,10 @@ export class DistanceHelper {
 		//*round the distance to be calculated in kilometers
 		const round = 6371; // km
 		//* prepare attributes for the formula
-		const latitudeDifference = this.#toRadians(this.#secondPoint.latitude - this.#firstPoint.latitude);
-		const longitudeDifference = this.#toRadians(this.#secondPoint.longitude - this.#firstPoint.longitude);
-		const firstPointLatitude = this.#toRadians(this.#firstPoint.latitude);
-		const secondPointLatitude = this.#toRadians(this.#secondPoint.latitude);
+		const latitudeDifference = this.#toRadians(this.#secondPoint.lat - this.#firstPoint.lat);
+		const longitudeDifference = this.#toRadians(this.#secondPoint.lng - this.#firstPoint.lng);
+		const firstPointLatitude = this.#toRadians(this.#firstPoint.lat);
+		const secondPointLatitude = this.#toRadians(this.#secondPoint.lat);
 		//* calculate the angle
 		const angle = Math.sin(latitudeDifference / 2) * Math.sin(latitudeDifference / 2) +
 			Math.sin(longitudeDifference / 2) * Math.sin(longitudeDifference / 2) * 
