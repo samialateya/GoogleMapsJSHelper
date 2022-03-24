@@ -24,6 +24,8 @@ git clone https://github.com/samialateya/GoogleMapsJSHelper.git
 npm install
 
 npm run dev
+
+npm run build
 ```
 
 ## Google Developer Console Setup
